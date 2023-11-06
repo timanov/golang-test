@@ -1,15 +1,11 @@
 name: Docker build
 
 on:
-  push:
-    branches:
-      - main # Указать ветку для запуска github actions
-
-workflow_dispatch:
-  inputs:
-    tag:
-      description: 'Docker image tag'
-      required: true
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Docker image tag'
+        required: true
 
 jobs:
   build:
