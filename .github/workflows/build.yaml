@@ -15,9 +15,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t my-image-name:latest .
+      run: docker build -t happymishka/my-image-name2:latest .
 
     - name: Push Docker image to Docker hub
       run: |
         echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-        docker push my-image-name:latest
+        docker push happymishka/my-image-name2:latest
